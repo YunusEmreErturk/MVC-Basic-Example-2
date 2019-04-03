@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "ŞirketAnasayfa";
+}
+
+@model List<Personel>
+
+<div>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Personel Adi</th>
+                <th>Personel Soyadi</th>
+                <th>Personel Adresi</th>
+                <th>Personel Birimi</th>
+            </tr>
+        </thead>
+        @foreach (var personel in (List<Personel>)Model)
+        {
+            <tr>
+                <td>@personel.PersonelAdi</td>
+                <td>@personel.PersonelSoyadi</td>
+                <td>@personel.PersonelAdresi</td>
+                <td>@personel.Birimler.BirimAdi</td>
+            </tr>
+
+        }
+    </table>
+  </div>
